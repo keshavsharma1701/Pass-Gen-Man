@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+
+      <title>Pass-Gen&Man</title>
+</head>
+
+<body>
+      <header>
+            <ul>
+                  <li><a href="#generator">Password Generator</a></li>
+                  <li><a href="#manager">Password Manager</a></li>
+            </ul>
+      </header>
+      <div class="flex">
+            <div id="generator">
+                  <h1>Generate Random Password</h1>
+                  <div class="box">
+                        <span id="pass-box"></span>
+                        <div class="row">
+                              <div class="left">
+                                    Password Length
+                              </div>
+                              <div class="right">
+                                    <input type="number" name="" id="total-char" max="30" min="2" value="10" />
+                              </div>
+                        </div>
+                        <div class="row">
+                              <label for="upper-case">
+                                    <div class="left">
+                                          Contains Uppercase
+                                    </div>
+                              </label>
+                              <div class="right">
+                                    <input type="checkbox" name="" id="upper-case" checked />
+                              </div>
+                        </div>
+                        <div class="row">
+                              <label for="lower-case">
+                                    <div class="left">
+                                          Contains Lowercase
+                                    </div>
+                              </label>
+                              <div class="right">
+                                    <input type="checkbox" name="" id="lower-case" />
+                              </div>
+                        </div>
+                        <div class="row">
+                              <label for="numbers">
+                                    <div class="left">
+                                          Contains Numbers
+                                    </div>
+                              </label>
+                              <div class="right">
+                                    <input type="checkbox" name="" id="numbers" />
+                              </div>
+                        </div>
+                        <div class="row">
+                              <label for="symbols">
+                                    <div class="left">
+                                          Contains Symbols
+                                    </div>
+                              </label>
+                              <div class="right">
+                                    <input type="checkbox" name="" id="symbols" />
+                              </div>
+                        </div>
+                        <div class="row">
+                              <button id="btn">
+                                    Generate
+                              </button>
+                        </div>
+                  </div>
+            </div>
+            <div class="container" id="manager">
+                  <h1>Save your Password</h1>
+                  <h2>Your Passwords <span id="alert">(Copied!)</span></h2>
+                  <table>
+                        <tr>
+                              <th>Website</th>
+                              <th>Username</th>
+                              <th>Password</th>
+                              <th>Delete</th>
+                        </tr>
+
+                  </table>
+
+                  <h2>Add a Password</h2>
+                  <form action="/submit" method="post">
+
+                        <!-- Text input for website -->
+                        <label for="website" class="managerlabel">Website:</label>
+                        <input type="text" id="website" name="website" class="managerinput" required>
+                        <br><br>
+
+                        <!-- Text input for username -->
+                        <label for="username" class="managerlabel">Username:</label>
+                        <input type="text" id="username" name="username" class="managerinput" required>
+                        <br><br>
+
+                        <!-- Password input -->
+                        <label for="password" class="managerlabel">Password:</label>
+                        <input type="password" id="password" name="password" class="managerinput" required>
+                        <br>
+                        <!-- Submit button -->
+                        <button class="managerbtn" type="submit">Submit</button>
+                  </form>
+            </div>
+      </div>
+      <script src="index.js"></script>
+</body>
+
+</html>
